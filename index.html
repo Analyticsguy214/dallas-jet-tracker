@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dallas Jet Tracker</title>
+<meta name="description" content="Business-jet traffic at Dallas Love Field, Addison and DFW, tracked from free ADS-B data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg:#0b0e14; --card:#131824; --line:#232a3a; --ink:#eef1f7; --muted:#8b93a7;
+    --dal:#C8102E; --ads:#E8A33D; --dfw:#5B7FFF; --accent:#E8A33D;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+  header { padding:40px 0 24px; border-bottom:1px solid var(--line); }
+  .eyebrow { font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.12em; color:var(--accent); text-transform:uppercase; }
+  h1 { margin:8px 0 6px; font-size:clamp(30px,6vw,48px); font-weight:800; letter-spacing:-.02em; }
+  .sub { margin:0; color:var(--muted); }
+  .status { margin-top:14px; font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--muted); }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#2ecc71; margin-right:6px; box-shadow:0 0 8px #2ecc71; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:24px 0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .kpi h3 { margin:0; font-size:13px; color:var(--muted); font-weight:600; }
+  .kpi .big { font-size:34px; font-weight:800; margin-top:4px; font-family:"JetBrains Mono",monospace; }
+  .kpi .meta { font-size:12px; color:var(--muted); }
+  .kpi.dal { border-top:3px solid var(--dal); } .kpi.ads { border-top:3px solid var(--ads); }
+  .kpi.dfw { border-top:3px solid var(--dfw); } .kpi.all { border-top:3px solid var(--ink); }
+  section.card { margin-bottom:16px; }
+  h2 { margin:0 0 4px; font-size:19px; }
+  .note { margin:0 0 14px; font-size:13px; color:var(--muted); }
+  #map { height:420px; border-radius:10px; }
+  .chartbox { position:relative; height:320px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px) { .two { grid-template-columns:1fr; } #map { height:340px; } }
+  .jet { font-size:18px; line-height:1; text-shadow:0 0 4px #000; }
+  .leaflet-popup-content { font-family:Inter,sans-serif; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td, th { padding:6px 4px; border-bottom:1px solid var(--line); text-align:left; }
+  th { color:var(--muted); font-weight:600; }
+  .empty { color:var(--muted); font-size:14px; padding:20px 0; }
+  footer { padding:24px 0 48px; font-size:13px; color:var(--muted); line-height:1.6; }
+  footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Dallas business aviation</div>
+    <h1>Dallas Jet Tracker</h1>
+    <p class="sub">Private and business jet traffic at Love Field, Addison and DFW, from free ADS-B data.</p>
+    <div class="status" id="status">Loading…</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid" id="kpis"></div>
+
+  <section class="card">
+    <h2>Business jets in the area now</h2>
+    <p class="note" id="mapnote">Snapshot within 30 nm of Dallas, refreshed every 15 minutes.</p>
+    <div id="map"></div>
+  </section>
+
+  <section class="card">
+    <h2>Daily jet visits by airport</h2>
+    <p class="note">Unique business jets seen on the ground or below 2,000 ft within 3 nm of each airport. Shaded days are events.</p>
+    <div class="chartbox"><canvas id="daily"></canvas></div>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <h2>Most common jets</h2>
+      <p class="note">Last 30 days, all three airports</p>
+      <div class="chartbox"><canvas id="types"></canvas></div>
+    </section>
+    <section class="card">
+      <h2>Event days</h2>
+      <p class="note">Visits on event days vs. the 30-day daily average</p>
+      <div id="events"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  Data from <a href="https://airplanes.live" target="_blank" rel="noopener">airplanes.live</a> and
+  <a href="https://adsb.fi" target="_blank" rel="noopener">adsb.fi</a> community ADS-B feeds (non-commercial use).
+  Counts are aggregate only: no tail numbers or callsigns are published, and aircraft enrolled in the FAA's
+  privacy programs (PIA/LADD) are excluded. ADS-B coverage near the ground can be patchy, so counts are a lower bound.
+  Built by Kernell Slack, SMU Cox.
+</footer>
+
+<script>
+const AP_COLORS = { DAL: "#C8102E", ADS: "#E8A33D", DFW: "#5B7FFF" };
+const AP_NAMES = { DAL: "Love Field", ADS: "Addison", DFW: "DFW Intl" };
+const getJSON = (p, fallback) => fetch(p + "?v=" + Date.now()).then(r => r.ok ? r.json() : fallback).catch(() => fallback);
+const fmtDay = d => new Date(d + "T12:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
+Chart.defaults.color = "#8b93a7";
+Chart.defaults.font.family = "Inter, sans-serif";
+Chart.defaults.borderColor = "#232a3a";
+
+Promise.all([getJSON("data/live.json", null), getJSON("data/daily.json", {}), getJSON("data/events.json", [])])
+.then(([live, daily, events]) => {
+  if (!live) {
+    document.getElementById("status").textContent = "No data yet. Run the “Track jets” workflow to start collecting.";
+    return;
+  }
+  const names = live.typeNames || {};
+  const updated = new Date(live.updated);
+  document.getElementById("status").innerHTML =
+    `<span class="dot"></span>Updated ${updated.toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit" })} CT · ${live.aircraft.length} business jets in the area`;
+
+  // ---- KPIs
+  const days = Object.keys(daily).sort();
+  const today = days[days.length - 1];
+  const t = daily[today] || { DAL: 0, ADS: 0, DFW: 0 };
+  const last7 = days.slice(-7).reduce((s, d) => s + daily[d].DAL + daily[d].ADS + daily[d].DFW, 0);
+  const k = document.getElementById("kpis");
+  ["DAL", "ADS", "DFW"].forEach(c => k.insertAdjacentHTML("beforeend",
+    `<div class="card kpi ${c.toLowerCase()}"><h3>${AP_NAMES[c]} (${c})</h3><div class="big">${t[c]}</div><div class="meta">jet visits today</div></div>`));
+  k.insertAdjacentHTML("beforeend",
+    `<div class="card kpi all"><h3>Last 7 days</h3><div class="big">${last7}</div><div class="meta">visits, all airports</div></div>`);
+
+  // ---- Map
+  const map = L.map("map", { scrollWheelZoom: false }).setView([32.92, -96.92], 10);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 14
+  }).addTo(map);
+  Object.entries(live.airports).forEach(([code, ap]) => {
+    L.circle([ap.lat, ap.lon], { radius: 5556, color: AP_COLORS[code], weight: 1, fillOpacity: .08 })
+      .addTo(map).bindTooltip(`${ap.name} (${code})`);
+  });
+  live.aircraft.forEach(a => {
+    const rot = (a.track ?? 90) - 90;
+    const color = a.nearAirport ? AP_COLORS[a.nearAirport] : "#ffffff";
+    const icon = L.divIcon({ className: "", html: `<div class="jet" style="color:${color};transform:rotate(${rot}deg)">✈</div>`, iconSize: [18, 18], iconAnchor: [9, 9] });
+    const alt = a.alt === "ground" ? "On ground" : (a.alt != null ? a.alt.toLocaleString() + " ft" : "—");
+    L.marker([a.lat, a.lon], { icon }).addTo(map)
+      .bindPopup(`<b>${names[a.type] || a.type}</b><br>${alt}${a.gs ? " · " + Math.round(a.gs) + " kt" : ""}${a.nearAirport ? "<br>At " + AP_NAMES[a.nearAirport] : ""}`);
+  });
+  if (!live.aircraft.length) document.getElementById("mapnote").textContent += " No business jets in range right now.";
+
+  // ---- Daily chart (last 60 days) with event shading
+  const showDays = days.slice(-60);
+  const eventDates = new Set(events.map(e => e.date));
+  const shade = {
+    id: "shade",
+    beforeDatasetsDraw(chart) {
+      const { ctx, chartArea, scales: { x } } = chart;
+      showDays.forEach((d, i) => {
+        if (!eventDates.has(d)) return;
+        const w = x.width / showDays.length;
+        ctx.save(); ctx.fillStyle = "rgba(232,163,61,.15)";
+        ctx.fillRect(x.getPixelForValue(i) - w / 2, chartArea.top, w, chartArea.bottom - chartArea.top);
+        ctx.restore();
+      });
+    }
+  };
+  new Chart(document.getElementById("daily"), {
+    type: "bar",
+    data: {
+      labels: showDays.map(fmtDay),
+      datasets: ["DAL", "ADS", "DFW"].map(c => ({ label: AP_NAMES[c], data: showDays.map(d => daily[d][c]), backgroundColor: AP_COLORS[c], borderRadius: 2 }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: { tooltip: { callbacks: { afterTitle: items => {
+        const ev = events.find(e => e.date === showDays[items[0].dataIndex]);
+        return ev ? "★ " + ev.name : "";
+      } } } },
+      scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } } }
+    },
+    plugins: [shade]
+  });
+
+  // ---- Top types (last 30 days)
+  const typeTotals = {};
+  days.slice(-30).forEach(d => Object.entries(daily[d].types || {}).forEach(([ty, n]) => typeTotals[ty] = (typeTotals[ty] || 0) + n));
+  const top = Object.entries(typeTotals).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  if (top.length) {
+    new Chart(document.getElementById("types"), {
+      type: "bar",
+      data: { labels: top.map(([ty]) => names[ty] || ty), datasets: [{ data: top.map(([, n]) => n), backgroundColor: "#E8A33D", borderRadius: 3 }] },
+      options: { indexAxis: "y", responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+        scales: { x: { beginAtZero: true, ticks: { precision: 0 } }, y: { grid: { display: false } } } }
+    });
+  } else {
+    document.getElementById("types").parentElement.innerHTML = '<div class="empty">Collecting data…</div>';
+  }
+
+  // ---- Events table
+  const total = d => daily[d] ? daily[d].DAL + daily[d].ADS + daily[d].DFW : null;
+  const recent = days.slice(-30);
+  const avg = recent.length ? recent.reduce((s, d) => s + total(d), 0) / recent.length : 0;
+  const evRows = events.filter(e => daily[e.date]).sort((a, b) => b.date.localeCompare(a.date));
+  document.getElementById("events").innerHTML = evRows.length
+    ? `<table><tr><th>Date</th><th>Event</th><th>Visits</th><th>vs avg</th></tr>${evRows.map(e => {
+        const v = total(e.date), x = avg ? (v / avg).toFixed(1) + "×" : "—";
+        return `<tr><td>${fmtDay(e.date)}</td><td>${e.name}</td><td>${v}</td><td>${x}</td></tr>`;
+      }).join("")}</table>`
+    : '<div class="empty">Add events to data/events.json to compare (e.g. Cowboys home games, SMU football, State Fair).</div>';
+});
+</script>
+</body>
+</html>
