@@ -1,0 +1,143 @@
+{
+ "aircraft": [
+  {
+   "alt": 21700,
+   "gs": 404.0,
+   "lat": 32.708,
+   "lon": -97.342,
+   "nearAirport": null,
+   "track": 282.14,
+   "type": "GL5T"
+  },
+  {
+   "alt": 3800,
+   "gs": 244.2,
+   "lat": 32.54,
+   "lon": -97.121,
+   "nearAirport": null,
+   "track": 296.77,
+   "type": "C560"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.2,
+   "lat": 32.916,
+   "lon": -97.052,
+   "nearAirport": "DFW",
+   "track": null,
+   "type": "C700"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.849,
+   "lon": -96.843,
+   "nearAirport": "DAL",
+   "track": null,
+   "type": "GLEX"
+  },
+  {
+   "alt": 4500,
+   "gs": 270.8,
+   "lat": 32.791,
+   "lon": -96.654,
+   "nearAirport": null,
+   "track": 314.85,
+   "type": "LJ45"
+  },
+  {
+   "alt": 5825,
+   "gs": 283.6,
+   "lat": 32.733,
+   "lon": -96.596,
+   "nearAirport": null,
+   "track": 324.18,
+   "type": "E545"
+  }
+ ],
+ "airports": {
+  "ADS": {
+   "elev": 644,
+   "lat": 32.9686,
+   "lon": -96.8364,
+   "name": "Addison"
+  },
+  "DAL": {
+   "elev": 487,
+   "lat": 32.8471,
+   "lon": -96.8518,
+   "name": "Dallas Love Field"
+  },
+  "DFW": {
+   "elev": 607,
+   "lat": 32.8998,
+   "lon": -97.0403,
+   "name": "DFW International"
+  }
+ },
+ "source": "opendata.adsb.fi",
+ "typeNames": {
+  "ASTR": "Gulfstream G100/Astra",
+  "BE40": "Hawker 400",
+  "C25A": "Citation CJ2",
+  "C25B": "Citation CJ3",
+  "C25C": "Citation CJ4",
+  "C25M": "Citation M2",
+  "C510": "Citation Mustang",
+  "C525": "Citation CJ",
+  "C550": "Citation II/Bravo",
+  "C560": "Citation V/Encore",
+  "C56X": "Citation Excel/XLS",
+  "C650": "Citation III/VII",
+  "C680": "Citation Sovereign",
+  "C68A": "Citation Latitude",
+  "C700": "Citation Longitude",
+  "C750": "Citation X",
+  "CL30": "Challenger 300",
+  "CL35": "Challenger 350",
+  "CL60": "Challenger 600/650",
+  "E35L": "Legacy 600/650",
+  "E50P": "Phenom 100",
+  "E545": "Praetor 500",
+  "E550": "Praetor 600",
+  "E55P": "Phenom 300",
+  "EA50": "Eclipse 500",
+  "F2TH": "Falcon 2000",
+  "F900": "Falcon 900",
+  "FA10": "Falcon 10",
+  "FA20": "Falcon 20",
+  "FA50": "Falcon 50",
+  "FA6X": "Falcon 6X",
+  "FA7X": "Falcon 7X",
+  "FA8X": "Falcon 8X",
+  "G150": "Gulfstream G150",
+  "G280": "Gulfstream G280",
+  "GA5C": "Gulfstream G500",
+  "GA6C": "Gulfstream G600",
+  "GA7C": "Gulfstream G700",
+  "GA8C": "Gulfstream G800",
+  "GALX": "Gulfstream G200",
+  "GL5T": "Global 5000/5500",
+  "GL6T": "Global 6000/6500",
+  "GL7T": "Global 7500",
+  "GLEX": "Global Express",
+  "GLF4": "Gulfstream G-IV",
+  "GLF5": "Gulfstream G550",
+  "GLF6": "Gulfstream G650",
+  "H25B": "Hawker 800",
+  "H25C": "Hawker 1000",
+  "HA4T": "Hawker 4000",
+  "HDJT": "HondaJet",
+  "LJ31": "Learjet 31",
+  "LJ35": "Learjet 35",
+  "LJ40": "Learjet 40",
+  "LJ45": "Learjet 45",
+  "LJ60": "Learjet 60",
+  "LJ75": "Learjet 75",
+  "PC24": "Pilatus PC-24",
+  "PRM1": "Premier I",
+  "SF50": "Cirrus Vision Jet",
+  "WW24": "Westwind"
+ },
+ "updated": "2026-10-29T12:36-05:00"
+}
