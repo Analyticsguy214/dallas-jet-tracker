@@ -1,103 +1,31 @@
 {
  "aircraft": [
   {
-   "alt": 2325,
-   "gs": 144.4,
-   "lat": 32.921,
-   "lon": -97.373,
+   "alt": 2800,
+   "gs": 213.8,
+   "lat": 32.985,
+   "lon": -96.866,
    "nearAirport": null,
-   "track": 190.38,
-   "type": "E55P"
+   "track": 317.65,
+   "type": "E545"
   },
   {
-   "alt": 800,
-   "gs": 97.7,
-   "lat": 32.841,
-   "lon": -97.364,
-   "nearAirport": null,
-   "track": 172.95,
-   "type": "C550"
-  },
-  {
-   "alt": 5125,
-   "gs": 261.6,
-   "lat": 33.248,
-   "lon": -97.279,
-   "nearAirport": null,
-   "track": 111.76,
-   "type": "C680"
-  },
-  {
-   "alt": 950,
-   "gs": 137.3,
-   "lat": 32.878,
-   "lon": -96.881,
+   "alt": 325,
+   "gs": 121.6,
+   "lat": 32.856,
+   "lon": -96.856,
    "nearAirport": "DAL",
-   "track": 137.36,
+   "track": 135.67,
    "type": "CL35"
   },
   {
-   "alt": "ground",
-   "gs": 0.0,
-   "lat": 32.845,
-   "lon": -96.839,
-   "nearAirport": "DAL",
-   "track": null,
-   "type": "C68A"
-  },
-  {
-   "alt": "ground",
-   "gs": 0.0,
-   "lat": 32.975,
-   "lon": -96.838,
-   "nearAirport": "ADS",
-   "track": null,
-   "type": "GALX"
-  },
-  {
-   "alt": "ground",
-   "gs": 0.0,
-   "lat": 32.969,
-   "lon": -96.835,
-   "nearAirport": "ADS",
-   "track": null,
-   "type": "C68A"
-  },
-  {
-   "alt": 2925,
-   "gs": 279.0,
-   "lat": 32.917,
-   "lon": -96.797,
+   "alt": 6200,
+   "gs": 264.5,
+   "lat": 32.74,
+   "lon": -96.729,
    "nearAirport": null,
-   "track": 309.91,
-   "type": "GLF4"
-  },
-  {
-   "alt": 950,
-   "gs": 121.0,
-   "lat": 33.212,
-   "lon": -96.587,
-   "nearAirport": null,
-   "track": 180.95,
-   "type": "FA20"
-  },
-  {
-   "alt": 16850,
-   "gs": 425.2,
-   "lat": 32.617,
-   "lon": -96.503,
-   "nearAirport": null,
-   "track": 98.93,
-   "type": "ASTR"
-  },
-  {
-   "alt": 5650,
-   "gs": 266.1,
-   "lat": 33.184,
-   "lon": -96.48,
-   "nearAirport": null,
-   "track": 242.47,
-   "type": "C25A"
+   "track": 134.69,
+   "type": "H25B"
   }
  ],
  "airports": {
@@ -184,5 +112,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-10-29T17:00-05:00"
+ "updated": "2026-10-29T20:55-05:00"
 }
