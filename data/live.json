@@ -1,67 +1,67 @@
 {
  "aircraft": [
   {
-   "alt": 27975,
-   "gs": 399.7,
-   "lat": 32.788,
-   "lon": -97.356,
+   "alt": 2375,
+   "gs": 172.6,
+   "lat": 32.884,
+   "lon": -97.472,
    "nearAirport": null,
-   "track": 258.75,
-   "type": "LJ35"
-  },
-  {
-   "alt": 1875,
-   "gs": 142.9,
-   "lat": 33.059,
-   "lon": -97.348,
-   "nearAirport": null,
-   "track": 96.43,
+   "track": 78.3,
    "type": "E55P"
   },
   {
-   "alt": 5975,
-   "gs": 228.3,
-   "lat": 32.778,
-   "lon": -96.983,
+   "alt": 4000,
+   "gs": 211.8,
+   "lat": 32.756,
+   "lon": -97.348,
    "nearAirport": null,
-   "track": 118.81,
+   "track": 169.11,
+   "type": "C25M"
+  },
+  {
+   "alt": 13525,
+   "gs": 300.3,
+   "lat": 32.599,
+   "lon": -97.147,
+   "nearAirport": null,
+   "track": 78.28,
+   "type": "E55P"
+  },
+  {
+   "alt": 1975,
+   "gs": 221.6,
+   "lat": 32.608,
+   "lon": -97.094,
+   "nearAirport": null,
+   "track": 184.14,
+   "type": "C56X"
+  },
+  {
+   "alt": 1875,
+   "gs": 148.7,
+   "lat": 32.937,
+   "lon": -96.947,
+   "nearAirport": null,
+   "track": 165.59,
+   "type": "E55P"
+  },
+  {
+   "alt": 1025,
+   "gs": 126.6,
+   "lat": 32.875,
+   "lon": -96.89,
+   "nearAirport": "DAL",
+   "track": 135.32,
    "type": "BE40"
   },
   {
-   "alt": 16725,
-   "gs": 305.5,
-   "lat": 33.244,
-   "lon": -96.86,
+   "alt": 2900,
+   "gs": 221.6,
+   "lat": 33.013,
+   "lon": -96.859,
    "nearAirport": null,
-   "track": 314.73,
-   "type": "C56X"
-  },
-  {
-   "alt": 375,
-   "gs": 99.7,
-   "lat": 32.857,
-   "lon": -96.856,
-   "nearAirport": "DAL",
-   "track": 135.41,
-   "type": "C68A"
-  },
-  {
-   "alt": 4175,
-   "gs": 214.7,
-   "lat": 32.804,
-   "lon": -96.798,
-   "nearAirport": null,
-   "track": 138.59,
-   "type": "C56X"
-  },
-  {
-   "alt": 3800,
-   "gs": 222.0,
-   "lat": 33.09,
-   "lon": -96.612,
-   "nearAirport": null,
-   "track": 245.51,
-   "type": "LJ31"
+   "track": 227.74,
+   "type": "H25B"
   }
  ],
  "airports": {
@@ -148,5 +148,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-01T13:01-06:00"
+ "updated": "2026-11-01T16:46-06:00"
 }
