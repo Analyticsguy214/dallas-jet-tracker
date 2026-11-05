@@ -1,5 +1,123 @@
 {
- "aircraft": [],
+ "aircraft": [
+  {
+   "alt": 41000,
+   "gs": 487.8,
+   "lat": 32.854,
+   "lon": -97.426,
+   "nearAirport": null,
+   "track": 80.44,
+   "type": "C68A"
+  },
+  {
+   "alt": 20700,
+   "gs": 173.1,
+   "lat": 33.04,
+   "lon": -97.359,
+   "nearAirport": null,
+   "track": 261.03,
+   "type": "SF50"
+  },
+  {
+   "alt": 28875,
+   "gs": 297.5,
+   "lat": 32.825,
+   "lon": -97.12,
+   "nearAirport": null,
+   "track": 290.87,
+   "type": "C560"
+  },
+  {
+   "alt": 3975,
+   "gs": 217.8,
+   "lat": 32.496,
+   "lon": -97.092,
+   "nearAirport": null,
+   "track": 306.98,
+   "type": "E55P"
+  },
+  {
+   "alt": 15875,
+   "gs": 330.6,
+   "lat": 32.635,
+   "lon": -97.084,
+   "nearAirport": null,
+   "track": 275.56,
+   "type": "C68A"
+  },
+  {
+   "alt": 24000,
+   "gs": 355.6,
+   "lat": 32.463,
+   "lon": -96.973,
+   "nearAirport": null,
+   "track": 202.31,
+   "type": "C25B"
+  },
+  {
+   "alt": 2975,
+   "gs": 187.9,
+   "lat": 33.157,
+   "lon": -96.92,
+   "nearAirport": null,
+   "track": 160.41,
+   "type": "F900"
+  },
+  {
+   "alt": 2025,
+   "gs": 181.7,
+   "lat": 32.926,
+   "lon": -96.891,
+   "nearAirport": null,
+   "track": 220.09,
+   "type": "E55P"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.969,
+   "lon": -96.835,
+   "nearAirport": "ADS",
+   "track": null,
+   "type": "C68A"
+  },
+  {
+   "alt": 2975,
+   "gs": 214.4,
+   "lat": 33.161,
+   "lon": -96.802,
+   "nearAirport": null,
+   "track": 331.28,
+   "type": "C680"
+  },
+  {
+   "alt": 38000,
+   "gs": 413.0,
+   "lat": 32.528,
+   "lon": -96.766,
+   "nearAirport": null,
+   "track": 316.18,
+   "type": "GALX"
+  },
+  {
+   "alt": 7350,
+   "gs": 250.3,
+   "lat": 32.738,
+   "lon": -96.726,
+   "nearAirport": null,
+   "track": 135.32,
+   "type": "E55P"
+  },
+  {
+   "alt": 5600,
+   "gs": 272.7,
+   "lat": 32.68,
+   "lon": -96.556,
+   "nearAirport": null,
+   "track": 327.13,
+   "type": "GLF4"
+  }
+ ],
  "airports": {
   "ADS": {
    "elev": 644,
@@ -84,5 +202,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-05T03:41-06:00"
+ "updated": "2026-11-05T11:38-06:00"
 }
