@@ -1,22 +1,103 @@
 {
  "aircraft": [
   {
-   "alt": 41000,
-   "gs": 463.4,
-   "lat": 32.884,
-   "lon": -97.178,
+   "alt": 3775,
+   "gs": 211.0,
+   "lat": 32.697,
+   "lon": -97.422,
    "nearAirport": null,
-   "track": 25.85,
-   "type": "CL35"
+   "track": 143.67,
+   "type": "C68A"
   },
   {
-   "alt": 2525,
-   "gs": 169.2,
-   "lat": 32.74,
-   "lon": -96.77,
+   "alt": 2825,
+   "gs": 215.6,
+   "lat": 32.568,
+   "lon": -97.311,
    "nearAirport": null,
-   "track": 28.99,
-   "type": "C25B"
+   "track": 333.55,
+   "type": "C560"
+  },
+  {
+   "alt": 16375,
+   "gs": 341.2,
+   "lat": 33.17,
+   "lon": -97.269,
+   "nearAirport": null,
+   "track": 251.72,
+   "type": "LJ35"
+  },
+  {
+   "alt": "ground",
+   "gs": 27.5,
+   "lat": 32.899,
+   "lon": -97.027,
+   "nearAirport": "DFW",
+   "track": null,
+   "type": "GALX"
+  },
+  {
+   "alt": 6300,
+   "gs": 254.0,
+   "lat": 32.918,
+   "lon": -96.975,
+   "nearAirport": null,
+   "track": 248.28,
+   "type": "F900"
+  },
+  {
+   "alt": 1725,
+   "gs": 205.0,
+   "lat": 33.014,
+   "lon": -96.852,
+   "nearAirport": "ADS",
+   "track": 345.01,
+   "type": "LJ45"
+  },
+  {
+   "alt": 3700,
+   "gs": 239.4,
+   "lat": 33.055,
+   "lon": -96.783,
+   "nearAirport": null,
+   "track": 160.73,
+   "type": "C550"
+  },
+  {
+   "alt": 13100,
+   "gs": 281.0,
+   "lat": 32.906,
+   "lon": -96.706,
+   "nearAirport": null,
+   "track": 114.83,
+   "type": "C525"
+  },
+  {
+   "alt": 2750,
+   "gs": 192.9,
+   "lat": 32.747,
+   "lon": -96.698,
+   "nearAirport": null,
+   "track": 257.12,
+   "type": "C680"
+  },
+  {
+   "alt": 5575,
+   "gs": 263.0,
+   "lat": 32.838,
+   "lon": -96.581,
+   "nearAirport": null,
+   "track": 205.2,
+   "type": "PRM1"
+  },
+  {
+   "alt": 5750,
+   "gs": 271.8,
+   "lat": 32.971,
+   "lon": -96.536,
+   "nearAirport": null,
+   "track": 196.23,
+   "type": "GLF5"
   }
  ],
  "airports": {
@@ -103,5 +184,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-08T09:29-06:00"
+ "updated": "2026-11-08T13:52-06:00"
 }
