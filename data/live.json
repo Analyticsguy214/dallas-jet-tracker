@@ -1,15 +1,5 @@
 {
- "aircraft": [
-  {
-   "alt": 4425,
-   "gs": 212.9,
-   "lat": 32.885,
-   "lon": -97.371,
-   "nearAirport": null,
-   "track": 352.44,
-   "type": "GLEX"
-  }
- ],
+ "aircraft": [],
  "airports": {
   "ADS": {
    "elev": 644,
@@ -94,5 +84,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-08T20:49-06:00"
+ "updated": "2026-11-09T04:38-06:00"
 }
