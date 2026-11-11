@@ -1,13 +1,31 @@
 {
  "aircraft": [
   {
-   "alt": 8375,
-   "gs": 208.9,
-   "lat": 32.853,
-   "lon": -97.17,
+   "alt": "ground",
+   "gs": 79.0,
+   "lat": 32.962,
+   "lon": -96.834,
+   "nearAirport": "ADS",
+   "track": null,
+   "type": "C750"
+  },
+  {
+   "alt": 4700,
+   "gs": 235.9,
+   "lat": 32.849,
+   "lon": -96.599,
    "nearAirport": null,
-   "track": 344.17,
-   "type": "GA5C"
+   "track": 162.49,
+   "type": "C560"
+  },
+  {
+   "alt": 5075,
+   "gs": 244.8,
+   "lat": 32.621,
+   "lon": -96.592,
+   "nearAirport": null,
+   "track": 313.34,
+   "type": "FA50"
   }
  ],
  "airports": {
@@ -94,5 +112,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-11T05:35-06:00"
+ "updated": "2026-11-11T12:52-06:00"
 }
