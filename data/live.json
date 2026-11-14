@@ -1,5 +1,51 @@
 {
- "aircraft": [],
+ "aircraft": [
+  {
+   "alt": 2300,
+   "gs": 229.1,
+   "lat": 32.609,
+   "lon": -97.283,
+   "nearAirport": null,
+   "track": 358.0,
+   "type": "C560"
+  },
+  {
+   "alt": 2350,
+   "gs": 188.2,
+   "lat": 32.958,
+   "lon": -96.93,
+   "nearAirport": null,
+   "track": 219.61,
+   "type": "E55P"
+  },
+  {
+   "alt": 43000,
+   "gs": 361.6,
+   "lat": 33.03,
+   "lon": -96.913,
+   "nearAirport": null,
+   "track": 196.88,
+   "type": "E55P"
+  },
+  {
+   "alt": 3750,
+   "gs": 261.2,
+   "lat": 32.91,
+   "lon": -96.786,
+   "nearAirport": null,
+   "track": 317.64,
+   "type": "E55P"
+  },
+  {
+   "alt": 45000,
+   "gs": 423.6,
+   "lat": 33.02,
+   "lon": -96.521,
+   "nearAirport": null,
+   "track": 233.16,
+   "type": "C750"
+  }
+ ],
  "airports": {
   "ADS": {
    "elev": 644,
@@ -84,5 +130,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-14T04:16-06:00"
+ "updated": "2026-11-14T10:39-06:00"
 }
