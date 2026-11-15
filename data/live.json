@@ -1,22 +1,85 @@
 {
  "aircraft": [
   {
-   "alt": 37450,
-   "gs": 402.2,
-   "lat": 32.603,
-   "lon": -97.234,
+   "alt": "ground",
+   "gs": 52.5,
+   "lat": 32.665,
+   "lon": -97.095,
    "nearAirport": null,
-   "track": 181.85,
+   "track": 348.75,
+   "type": "CL35"
+  },
+  {
+   "alt": 1750,
+   "gs": 191.4,
+   "lat": 32.958,
+   "lon": -96.941,
+   "nearAirport": null,
+   "track": 199.86,
+   "type": "H25B"
+  },
+  {
+   "alt": 2900,
+   "gs": 180.7,
+   "lat": 33.033,
+   "lon": -96.93,
+   "nearAirport": null,
+   "track": 200.74,
+   "type": "F2TH"
+  },
+  {
+   "alt": 1725,
+   "gs": 174.5,
+   "lat": 33.067,
+   "lon": -96.881,
+   "nearAirport": null,
+   "track": 155.64,
+   "type": "GLF5"
+  },
+  {
+   "alt": "ground",
+   "gs": 3.8,
+   "lat": 32.857,
+   "lon": -96.857,
+   "nearAirport": "DAL",
+   "track": null,
+   "type": "LJ31"
+  },
+  {
+   "alt": "ground",
+   "gs": 13.2,
+   "lat": 32.849,
+   "lon": -96.853,
+   "nearAirport": "DAL",
+   "track": null,
+   "type": "E545"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.961,
+   "lon": -96.831,
+   "nearAirport": "ADS",
+   "track": null,
    "type": "C56X"
   },
   {
-   "alt": 16225,
-   "gs": 200.3,
-   "lat": 32.899,
-   "lon": -96.359,
+   "alt": 45000,
+   "gs": 520.8,
+   "lat": 33.153,
+   "lon": -96.736,
    "nearAirport": null,
-   "track": 96.59,
-   "type": "C25A"
+   "track": 118.43,
+   "type": "CL35"
+  },
+  {
+   "alt": 3700,
+   "gs": 274.1,
+   "lat": 32.633,
+   "lon": -96.623,
+   "nearAirport": null,
+   "track": 48.11,
+   "type": "F2TH"
   }
  ],
  "airports": {
@@ -103,5 +166,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-15T08:44-06:00"
+ "updated": "2026-11-15T13:58-06:00"
 }
