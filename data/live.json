@@ -1,58 +1,76 @@
 {
  "aircraft": [
   {
-   "alt": 32050,
-   "gs": 410.3,
-   "lat": 32.455,
-   "lon": -97.099,
+   "alt": 10075,
+   "gs": 328.3,
+   "lat": 32.606,
+   "lon": -97.253,
    "nearAirport": null,
-   "track": 203.25,
-   "type": "CL35"
-  },
-  {
-   "alt": 39000,
-   "gs": 454.6,
-   "lat": 32.804,
-   "lon": -97.012,
-   "nearAirport": null,
-   "track": 33.06,
-   "type": "C25B"
-  },
-  {
-   "alt": 7750,
-   "gs": 283.2,
-   "lat": 32.497,
-   "lon": -96.957,
-   "nearAirport": null,
-   "track": 65.15,
-   "type": "BE40"
-  },
-  {
-   "alt": 5350,
-   "gs": 276.0,
-   "lat": 33.2,
-   "lon": -96.939,
-   "nearAirport": null,
-   "track": 294.0,
-   "type": "H25B"
-  },
-  {
-   "alt": 44575,
-   "gs": 501.6,
-   "lat": 32.66,
-   "lon": -96.48,
-   "nearAirport": null,
-   "track": 111.4,
-   "type": "E545"
-  },
-  {
-   "alt": 15025,
-   "gs": 316.2,
-   "lat": 32.77,
-   "lon": -96.426,
-   "nearAirport": null,
-   "track": 81.82,
+   "track": 139.32,
    "type": "C56X"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.913,
+   "lon": -97.035,
+   "nearAirport": "DFW",
+   "track": null,
+   "type": "E55P"
+  },
+  {
+   "alt": 47000,
+   "gs": 553.7,
+   "lat": 32.715,
+   "lon": -97.034,
+   "nearAirport": null,
+   "track": 110.4,
+   "type": "C750"
+  },
+  {
+   "alt": 25125,
+   "gs": 402.2,
+   "lat": 32.489,
+   "lon": -96.906,
+   "nearAirport": null,
+   "track": 187.28,
+   "type": "LJ60"
+  },
+  {
+   "alt": 13000,
+   "gs": 262.4,
+   "lat": 32.758,
+   "lon": -96.874,
+   "nearAirport": null,
+   "track": 316.08,
+   "type": "E550"
+  },
+  {
+   "alt": 4800,
+   "gs": 259.1,
+   "lat": 32.795,
+   "lon": -96.789,
+   "nearAirport": null,
+   "track": 137.82,
+   "type": "GL7T"
+  },
+  {
+   "alt": 15275,
+   "gs": 202.1,
+   "lat": 33.057,
+   "lon": -96.696,
+   "nearAirport": null,
+   "track": 242.93,
+   "type": "C25A"
+  },
+  {
+   "alt": 5025,
+   "gs": 127.2,
+   "lat": 33.213,
+   "lon": -96.696,
+   "nearAirport": null,
+   "track": 356.85,
+   "type": "H25B"
   }
  ],
  "airports": {
@@ -139,5 +157,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-21T12:11-06:00"
+ "updated": "2026-11-21T17:13-06:00"
 }
