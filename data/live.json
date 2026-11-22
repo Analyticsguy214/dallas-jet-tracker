@@ -1,112 +1,13 @@
 {
  "aircraft": [
   {
-   "alt": 2875,
-   "gs": 200.4,
-   "lat": 33.084,
-   "lon": -97.322,
+   "alt": 9125,
+   "gs": 261.3,
+   "lat": 33.01,
+   "lon": -97.114,
    "nearAirport": null,
-   "track": 3.72,
-   "type": "C56X"
-  },
-  {
-   "alt": 4375,
-   "gs": 203.8,
-   "lat": 33.155,
-   "lon": -97.284,
-   "nearAirport": null,
-   "track": 23.42,
-   "type": "C68A"
-  },
-  {
-   "alt": 13800,
-   "gs": 276.8,
-   "lat": 32.854,
-   "lon": -97.171,
-   "nearAirport": null,
-   "track": 249.93,
-   "type": "C56X"
-  },
-  {
-   "alt": 4875,
-   "gs": 265.3,
-   "lat": 33.282,
-   "lon": -97.09,
-   "nearAirport": null,
-   "track": 118.11,
-   "type": "GLF5"
-  },
-  {
-   "alt": 43000,
-   "gs": 413.1,
-   "lat": 32.984,
-   "lon": -96.945,
-   "nearAirport": null,
-   "track": 328.96,
+   "track": 275.71,
    "type": "E55P"
-  },
-  {
-   "alt": 4850,
-   "gs": 267.5,
-   "lat": 33.217,
-   "lon": -96.945,
-   "nearAirport": null,
-   "track": 117.62,
-   "type": "CL35"
-  },
-  {
-   "alt": 2525,
-   "gs": 206.3,
-   "lat": 32.889,
-   "lon": -96.897,
-   "nearAirport": null,
-   "track": 310.87,
-   "type": "E50P"
-  },
-  {
-   "alt": 3875,
-   "gs": 202.3,
-   "lat": 32.447,
-   "lon": -96.891,
-   "nearAirport": null,
-   "track": 45.8,
-   "type": "C68A"
-  },
-  {
-   "alt": 1700,
-   "gs": 147.4,
-   "lat": 32.908,
-   "lon": -96.812,
-   "nearAirport": null,
-   "track": 340.58,
-   "type": "C650"
-  },
-  {
-   "alt": 2075,
-   "gs": 157.8,
-   "lat": 32.828,
-   "lon": -96.723,
-   "nearAirport": null,
-   "track": 312.69,
-   "type": "C68A"
-  },
-  {
-   "alt": 2375,
-   "gs": 166.2,
-   "lat": 32.742,
-   "lon": -96.723,
-   "nearAirport": null,
-   "track": 315.73,
-   "type": "C68A"
-  },
-  {
-   "alt": 20900,
-   "gs": 422.6,
-   "lat": 32.923,
-   "lon": -96.687,
-   "nearAirport": null,
-   "track": 127.11,
-   "type": "CL30"
   }
  ],
  "airports": {
@@ -193,5 +94,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-22T12:29-06:00"
+ "updated": "2026-11-22T17:44-06:00"
 }
