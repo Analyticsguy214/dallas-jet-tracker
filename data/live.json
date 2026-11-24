@@ -2,11 +2,74 @@
  "aircraft": [
   {
    "alt": "ground",
-   "gs": 6.8,
-   "lat": 32.845,
-   "lon": -96.855,
-   "nearAirport": "DAL",
+   "gs": 0.0,
+   "lat": 32.913,
+   "lon": -97.035,
+   "nearAirport": "DFW",
    "track": null,
+   "type": "F900"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.453,
+   "lon": -96.915,
+   "nearAirport": null,
+   "track": null,
+   "type": "F900"
+  },
+  {
+   "alt": 475,
+   "gs": 129.5,
+   "lat": 32.842,
+   "lon": -96.853,
+   "nearAirport": "DAL",
+   "track": 316.57,
+   "type": "E55P"
+  },
+  {
+   "alt": "ground",
+   "gs": 13.8,
+   "lat": 32.972,
+   "lon": -96.837,
+   "nearAirport": "ADS",
+   "track": null,
+   "type": "CL30"
+  },
+  {
+   "alt": "ground",
+   "gs": 0.0,
+   "lat": 32.961,
+   "lon": -96.831,
+   "nearAirport": "ADS",
+   "track": null,
+   "type": "E545"
+  },
+  {
+   "alt": 4650,
+   "gs": 256.2,
+   "lat": 33.124,
+   "lon": -96.817,
+   "nearAirport": null,
+   "track": 137.53,
+   "type": "C560"
+  },
+  {
+   "alt": 1425,
+   "gs": 136.3,
+   "lat": 32.91,
+   "lon": -96.811,
+   "nearAirport": null,
+   "track": 341.17,
+   "type": "GLF5"
+  },
+  {
+   "alt": 1075,
+   "gs": 103.2,
+   "lat": 32.802,
+   "lon": -96.806,
+   "nearAirport": null,
+   "track": 315.78,
    "type": "C56X"
   }
  ],
@@ -94,5 +157,5 @@
   "SF50": "Cirrus Vision Jet",
   "WW24": "Westwind"
  },
- "updated": "2026-11-24T05:49-06:00"
+ "updated": "2026-11-24T15:43-06:00"
 }
